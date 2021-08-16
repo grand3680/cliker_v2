@@ -1,0 +1,53 @@
+/* руды ↓*/
+
+#backround_ore {
+    padding-top: 660px;
+    background-repeat: no-repeat;
+    background-image: url(../../images/backround_ore.png);
+    background-size: 1370px 750px;
+    margin-right: 505px;
+    margin-bottom: 500px;
+}
+
+.ores {
+    width: 250px;
+    height: 250px;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    z-index: 200px;
+}
+
+#copper_ore {
+    position: absolute;
+    bottom: 300px;
+    right: 1600px;
+}
+
+#diamong_ore {
+    position: absolute;
+    bottom: 290px;
+    right: 1350px;
+}
+
+#gold_ore {
+    position: absolute;
+    bottom: 280px;
+    right: 1100px;
+}
+
+#iron_ore {
+    position: absolute;
+    bottom: 290px;
+    right: 850px;
+}
+
+#coat_ore {
+    position: absolute;
+    bottom: 300px;
+    right: 600px;
+}
+
+
+/* руды ↑*/

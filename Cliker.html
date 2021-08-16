@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- оголовка сайта -->
+    <title> Cliker </title>
+    <!-- картинка сайта -->
+    <link rel="icon" href="images/mine.png" type="image/x-icon">
+    <!-- кадировка -->
+    <meta charset="UTF-8">
+
+    <!--внедрение всех css файлов на сайт -->
+    <link rel="stylesheet" href="Source/css/stove.css">
+    <link rel="stylesheet" href="Source/css/scroll.css">
+    <link rel="stylesheet" href="Source/css/styles.css">
+    <link rel="stylesheet" href="Source/css/shop.css">
+    <link rel="stylesheet" href="Source/css/ore_style.css">
+    <link rel="stylesheet" href="Source/css/libraries_css/reset.css">
+    <link rel="stylesheet" href="Source/css/indicators.css">
+
+
+    <!-- шрифт для индекаторов -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+    <!-- загрузка при запуске сайта -->
+    <div class="preloader"></div>
+    <!-- линия по горизонтали -->
+    <div class="line_horizontally"></div>
+    <!-- линия по вертекали -->
+    <hr class="line_vertically" size="10" color="black">
+
+    <!-- фон на катором стоят руды -->
+    <section id="ore_all">
+        <div id="backround_ore">
+            <!-- все руды -->
+            <div id="all_ore" class="ore">
+                <!-- медная руда -->
+                <button title="добыча медной руды 1 клик" id="copper_ore" class="ores">
+                    <img src="images/copper_ore.png">
+                </button>
+
+                <!-- алмазная руда -->
+                <button title="добыча алмазной руды 10 клик" id="diamong_ore" class="ores">
+                    <img src="images/diamong_ore.png">
+                </button>
+
+                <!-- золотая руда -->
+                <button title="добыча золотой руды 5 клик" id="gold_ore" class="ores">
+                    <img src="images/gold_ore.png">
+                </button>
+
+                <!-- железная руда -->
+                <button title="добыча железной руды 3 клик" id="iron_ore" class="ores">
+                    <img src="images/iron_ore.png">
+                </button>
+
+                <!-- угольная руда -->
+                <button title="добыча угольной руды 2 клик" id="coat_ore" class="ores">
+                    <img src="images/coat_ore.png">
+                </button>
+            </div>
+        </div>
+
+        <!-- индекаторы показатель руды -->
+        <div class="indicator">
+            <p id="copper_ore_TXT">меди : 0</p>
+            <p id="diamong_ore_TXT">алмазов : 0</p>
+            <p id="gold_ore_TXT">золото : 0</p>
+            <p id="iron_ore_TXT">железо : 0</p>
+            <p id="coat_ore_TXT">угля : 0</p>
+        </div>
+    </section>
+
+    <!-- индекаторы показатель слитков -->
+    <div title="показатели слитков" class="indicator">
+        <!-- показатель медных слитков -->
+        <p id="Copper_indicator_txt">Медных слитков : 0</p>
+        <img id="Copper_indicator-img" src="images/Copper.png" alt="медный слиток">
+
+        <!-- показатель алмазных слитков -->
+        <p id="diamong_indicator_txt">Алмазных слитков : 0</p>
+        <img id="diamong_indicator-img" src="images/diamong.png" alt="алмазный слиток">
+
+        <!-- показатель золотых слитков -->
+        <p id="gold_indicator_txt">Золотых слитков : 0</p>
+        <img id="gold_indicator-img" src="images/gold.png" alt="золотой слиток">
+
+        <!-- показатель железных слитков -->
+        <p id="iron_indicator_txt">Железных слитков : 0</p>
+        <img id="iron_indicator-img" src="images/iron.png" alt="железный слиток">
+
+    </div>
+
+
+    <!-- печка-вся -->
+    <section class="stove_all">
+        <!-- PopUp окно печки где слитки -->
+        <div id="popUp_stove" class="popUp_window" style="display: none;">
+            <!-- переплавка руды в медныйй слиток -->
+            <p id="Copper-txt">Медный_слиток</p>
+            <button title="переплавка руды в медный слиток" id="Copper-img" class="hiden_button">
+                <img src="images/Copper.png" alt="медный слиток">
+            </button>
+
+            <!-- переплавка руды в алмазный_слиток -->
+            <p id="diamong-txt">алмазный_слиток</p>
+            <button title="переплавка руды в алмазный_слиток" id="diamong-img" class="hiden_button">
+                <img src="images/diamong.png" alt="алмазный слиток">
+            </button>
+
+            <!-- переплавка руды в золотой_слито -->
+            <p id="gold-txt">золотой_слиток</p>
+            <button title="переплавка руды в золотой_слито" id="gold-img" class="hiden_button">
+                <img src="images/gold.png" alt="золотой слиток">
+            </button>
+
+            <!-- переплавка руды в железный_слито -->
+            <p id="iron-txt">железный_слиток</p>
+            <button title="переплавка руды в железный_слито" id="iron-img" class="hiden_button">
+                <img src="images/iron.png" alt="железный слиток">
+            </button>
+        </div>
+
+        <!-- печка -->
+        <div title="печка в ней можно перепловлять руды в слиток разница 1руда к 1слитку" class="stove">
+            <button id="stove_button">
+                <img src="images/stove.png" class="stove" alt="печка">
+            </button>
+        </div>
+    </section>
+
+    <!-- скрол в магазе -->
+    <div id="Scrolling_store" class="Scrolling Store">
+        <!-- цены всех товаров и информация -->
+        <div class="popUp_info Scrolling" id="popUp_information_store" style="display: none;">
+            <p class="txt_info">
+                Каждая кирка в игре позволяет копать руды по 2 штуки за раз если кирка например угольная она будет копать только уголь и нечего больше<br><br> Каждое улучшение слитков приносит в 2 раза больше слитков в печке чем раньше<br><br><br><br>
+            </p>
+        </div>
+        <button id="information_icon" class="store_button">
+            <img src="images/information_icon.png" class="store_img" alt="информация о ценах">
+        </button>
+
+
+        <!-- улучшение медных слитков -->
+        <button title="стоит 200 медных слитков +1 к переплавки" id="Copper_Upgrade" class="store_button" style="display: inline;">
+            <img src="images/Copper.png" class="store_img" alt="медный слиток">
+        </button>
+
+        <!-- улучшение алмазных слитков -->
+        <button title="тоит 200 алмазных слитков даёт +1 к переплавки" id="Diamong_Upgrade" class="store_button" style="display: inline;">
+            <img src="images/diamong.png" class="store_img" alt="алмазный слиток">
+        </button>
+
+        <!-- улучшение золотых слитков -->
+        <button title="стоит 200 золотых слитков даёт +1 к переплавки" id="Gold_Upgrade" class="store_button" style="display: inline;">
+            <img src="images/gold.png" class="store_img" alt="золотой слиток">
+        </button>
+
+        <!-- улучшение железных слитков -->
+        <button title="стоит 200 железных слитков даёт +1 к переплавки" id="Iron_Upgrade" class="store_button" style="display: inline;">
+            <img src="images/iron.png" class="store_img" alt="железный слиток">
+        </button>
+
+
+
+        <!-- кирка в магазе железная -->
+        <button title="стоит 100 железных слитков и 100 угля даёт +1 к добыче железной руды" id="Mine_Upgrade" class="store_button" style="display: inline;">
+            <img src="images/mine.png" class="store_img" alt="кирка железная">
+        </button>
+
+        <!-- кирка в магазе медная -->
+        <button title="стоит 100 медных слитков и 100 угля даёт +1 к добыче медной руды" id="Mine_copper_Upgrade" class="store_button" style="display: inline;">
+            <img src="images/mine_copper.png" class="store_img" alt="кирка медная">
+        </button>
+
+        <!-- кирка в магазе алмазная -->
+        <button title="стоит 100 алмазных слитков и 100 золотых слитков даёт +1 к добыче алмазной руды" id="Mine_diamong_Upgrade" class="store_button" style="display: inline;">
+            <img src="images/mine_diamong.png" class="store_img" alt="кирка алмазная">
+        </button>
+
+        <!-- кирка в магазе золотая -->
+        <button title="стоит 100 железных слитков и 100 угля даёт +1 к добыче золотой руды" id="Mine_gold_Upgrade" class="store_button" style="display: inline;">
+            <img src="images/mine_gold.png" class="store_img" alt="кирка золотая">
+        </button>
+
+        <!-- кирка в магазе угольная -->
+        <button title="стоит 200 угля даёт +1 к добыче угольной руды" id="Mine_coat_Upgrade" class="store_button" style="display: inline;">
+            <img src="images/mine_coat.png" class="store_img" alt="кирка угольная">
+        </button>
+    </div>
+
+
+    <!-- все js скрипты на сайте -->
+    <script src='Source/js/libraries_js/Tone.min.js'></script>
+    <script src="Source/js/libraries_js/jquery.min.js"></script>
+    <script src="Source/js/ores.js"></script>
+    <script src="Source/js/shop.js"></script>
+    <script src="Source/js/loader.js"></script>
+    <script src="Source/js/ingots.js"></script>
+
+    <!-- скрипт js для звуков клика по рудам -->
+    <script src="Source/js/sound/sound_for_all_ore.js"></script>
+
+</body>
+
+</html>

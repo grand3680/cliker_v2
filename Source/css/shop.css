@@ -1,0 +1,42 @@
+/* магаз ↓*/
+
+.store_button {
+    margin-top: 30px;
+    height: 180px;
+    width: 180px;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+}
+
+#information_icon {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 230px;
+    right: 420px;
+}
+
+.txt_info {
+    word-spacing: -2px;
+    font-size: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: rgb(119, 109, 109);
+    font-style: italic;
+}
+
+#popUp_information_store {
+    position: absolute;
+    opacity: 0.8;
+    bottom: -50px;
+    right: 58px;
+    width: 370px;
+    height: 330px;
+    background-color: #DBDBDB;
+    z-index: 12000px;
+}
+
+
+/* магаз ↑*/

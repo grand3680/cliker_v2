@@ -1,0 +1,63 @@
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #222222 url(../../images/Backround.gif)no-repeat center;
+    background-size: 100%;
+    text-align: center;
+    /* размещаем блок над всеми элементами на странице */
+    z-index: 10001;
+}
+
+.loaded .preloader {
+    display: none;
+}
+
+button:hover {
+    transform: scale(1.1) translateY(-10px);
+    cursor: pointer;
+}
+
+button {
+    outline: none
+}
+
+body {
+    text-align: center;
+    background-size: 100%;
+    background: linear-gradient(rgb(218, 212, 212), rgb(63, 63, 63));
+    z-index: -10000;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+html {
+    overflow: hidden;
+}
+
+
+/* Линии↓*/
+
+.line_horizontally {
+    position: absolute;
+    bottom: 0px;
+    right: 505px;
+    border-right: 6px solid black;
+    height: 100%;
+}
+
+.line_vertically {
+    position: absolute;
+    bottom: 300px;
+    width: 100%;
+    color: black;
+}
+
+
+/* Линии↑*/
